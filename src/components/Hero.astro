@@ -1,0 +1,56 @@
+---
+---
+
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+  
+  <!-- Image de fond -->
+  <div
+    class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+    style="background-image: url('/images/hero-bg.jpg');"
+  ></div>
+
+  <!-- Overlay sombre -->
+  <div class="absolute inset-0 bg-black/60"></div>
+
+  <!-- Contenu -->
+  <div class="relative z-10 text-center text-white px-6 max-w-5xl mx-auto">
+    
+    <p class="text-green-400 font-bold uppercase tracking-widest text-sm mb-4">
+      Paysagiste en Gironde
+    </p>
+
+    <h1 class="text-5xl md:text-7xl font-black uppercase leading-tight mb-6">
+      Transformez votre <br/>
+      <span class="text-green-400">espace extérieur</span>
+    </h1>
+
+    <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10">
+      Création, aménagement et entretien de jardins en Gironde. 
+      Un savoir-faire professionnel au service de vos espaces verts.
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href="/contact"
+        class="bg-green-600 text-white font-bold px-8 py-4 uppercase tracking-wide hover:bg-green-700 transition-colors"
+      >
+        Demander un devis gratuit
+      </a>
+      <a
+        href="/realisations"
+        class="border-2 border-white text-white font-bold px-8 py-4 uppercase tracking-wide hover:bg-white hover:text-gray-900 transition-colors"
+      >
+        Voir nos réalisations
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Flèche scroll -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </div>
+
+</section>

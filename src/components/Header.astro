@@ -1,0 +1,60 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo/logo.png';
+
+const navLinks = [
+  { href: '/', label: 'Accueil' },
+  { href: '/services/services', label: 'Services' },
+  { href: '/realisations', label: 'Réalisations' },
+  { href: '/zone-intervention', label: "Zone d'intervention" },
+  { href: '/contact', label: 'Contact' },
+];
+---
+
+<header class="fixed top-0 left-0 w-full z-50 bg-white border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+    <a href="/">
+      <Image src={logo} alt="Masis Paysagiste" height={60} />
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8">
+      {navLinks.map((link) => (
+        <a href={link.href} class="text-gray-800 font-semibold uppercase tracking-wide text-sm hover:text-green-600 transition-colors">
+          {link.label}
+        </a>
+      ))}
+    </nav>
+
+    <a href="/contact" class="hidden md:block bg-green-600 text-white font-bold px-6 py-3 uppercase tracking-wide text-sm hover:bg-green-700 transition-colors">
+      Devis gratuit
+    </a>
+
+    <button id="burger" class="md:hidden flex flex-col gap-1.5 cursor-pointer">
+      <span class="block w-6 h-0.5 bg-gray-900"></span>
+      <span class="block w-6 h-0.5 bg-gray-900"></span>
+      <span class="block w-6 h-0.5 bg-gray-900"></span>
+    </button>
+
+  </div>
+
+  <div id="mobile-menu" class="hidden md:hidden bg-white px-6 pb-6 flex flex-col gap-4">
+    {navLinks.map((link) => (
+      <a href={link.href} class="text-gray-800 font-semibold uppercase tracking-wide text-sm hover:text-green-600 transition-colors">
+        {link.label}
+      </a>
+    ))}
+    <a href="/contact" class="bg-green-600 text-white font-bold px-6 py-3 uppercase tracking-wide text-sm text-center hover:bg-green-700 transition-colors">
+      Devis gratuit
+    </a>
+  </div>
+</header>
+
+<script>
+  const burger = document.getElementById('burger');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  burger?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+</script>
